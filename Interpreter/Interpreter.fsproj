@@ -6,9 +6,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include=".dockerignore" />
+    <None Include="docker-compose.yml" />
+    <None Include="Dockerfile" />
+    <None Include="rinha\combination.rinha">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="rinha\sum.rinha">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="rinha\fib.rinha">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="src_json\combination.rinha.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="src_json\sum.rinha.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="src_json\fib.rinha.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Compile Include="ast.fs" />
     <Compile Include="parser.fs" />
     <Compile Include="Converter.fs" />
+    <Compile Include="TermConverter.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

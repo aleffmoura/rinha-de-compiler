@@ -1,5 +1,4 @@
 ﻿module ast
-
 type Location = { Start: int; End: int; FileName: string; }
 
 type Operation =
@@ -23,9 +22,15 @@ type Term =
     | first of First
     | second of Second
     | tuple of TupleTerm
+    | file of FileAst
+    | name of TermName
+    | location of Location
+    | expression of Term
+
+and TermName = string
 and Kind =  { kind: string; location: Location }
 and Var = { text: string; kind: Kind }
-and TupleTerm = { first: Term; second: Term }
+and TupleTerm = { kind: Kind; first: Term; second: Term }
 and First = { kind: Kind; value: Term }
 and Second = { kind: Kind; value: Term }
 and Print = { kind: Kind; value: Term }
@@ -37,10 +42,9 @@ and Bool = { kind: Kind; value: bool }
 and Str = { kind: Kind; value: string }
 and Let = { kind: Kind; name: Term; value: Term; next: Term  }
 and If = { kind: Kind; condition: Term; then': Term; otherwise: Term  }
-
-type File =
+and FileAst =
     {
-        Name: string
-        Expression: Term
-        Location: Location
+        name: Term
+        expression: Term
+        location: Term
     }
