@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Df93fDWJBl9q/DixllNO2NV22qmVy3FlMOsFfH3jbO7axo0VnKTpj4ZiLodtx0Lgp/J4NveJDcaBPu9KiTf+pQ==",
+  "success": true,
+  "projectFilePath": "D:\\GIT\\rinha-interpreter-with-fsharp\\src\\Interpreter\\Interpreter.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleff\\.nuget\\packages\\fsharp.core\\7.0.400\\fsharp.core.7.0.400.nupkg.sha512",
+    "C:\\Users\\aleff\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
