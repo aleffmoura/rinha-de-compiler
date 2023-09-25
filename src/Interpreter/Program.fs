@@ -42,6 +42,4 @@ let findAndRunRinhaFiles (args: string array) =
 [<EntryPoint>]
 let main args =
     findAndRunRinhaFiles args
-
-    Console.ReadKey () |> ignore
     0
