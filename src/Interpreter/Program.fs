@@ -30,10 +30,11 @@ let runFile filePath  =
     |> ignore
 
 let findAndRunRinhaFiles (args: string array) =
-    let path = 
-        if args.Length > 1 && Directory.Exists(args.[0]) then
+    let path =
+        if Directory.Exists(args.[0]) then
             args.[0]
-        else  $"{AppContext.BaseDirectory}/src_json"
+        else
+            $"{AppContext.BaseDirectory}/src_json"
 
     Directory.GetFiles (path, "*.rinha.json")
     |> Array.iter runFile 
