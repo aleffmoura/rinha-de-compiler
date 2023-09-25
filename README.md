@@ -6,8 +6,7 @@ Implementação de Tree-Walking em F# para a [Rinha de Compiler]().
 
 ### Usando Docker
 
-A imagem está configurada para executar acetar um parametro contendo o local de uma pasta e executar todos `*.rinha.json` e imprimir o resultado 
-no console.
+A imagem está configurada para aceitar um parametro contendo uma pasta e executar todos `*.rinha.json`.
 Caso local não exista ele pega os arquivos padrões dentro da imagem, localizados em /app/src_json
 
 Exemplo:
