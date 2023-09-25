@@ -15,4 +15,4 @@ RUN dotnet publish "Interpreter.fsproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Interpreter.dll", "/var/rinhas/"]
+ENTRYPOINT ["dotnet", "Interpreter.dll"]

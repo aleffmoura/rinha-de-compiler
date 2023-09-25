@@ -34,7 +34,9 @@ let findAndRunRinhaFiles (args: string array) =
         if Directory.Exists(args.[0]) then
             args.[0]
         else
-            $"{AppContext.BaseDirectory}/src_json"
+            $"{AppContext.BaseDirectory}src_json"
+
+    Console.WriteLine $"source file: {path}"
 
     Directory.GetFiles (path, "*.rinha.json")
     |> Array.iter runFile 
@@ -42,5 +44,6 @@ let findAndRunRinhaFiles (args: string array) =
 
 [<EntryPoint>]
 let main args =
+    Console.WriteLine $"source file: {args.[0]}"
     findAndRunRinhaFiles args
     0
